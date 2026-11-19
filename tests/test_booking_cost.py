@@ -45,5 +45,6 @@ def test_booking_cost_type_error(nights, nightly_rate_cents):
     ]
 )
 def test_booking_cost_value_error(nights, nightly_rate_cents):
+    
     with pytest.raises(ValueError):
         calculate_booking_cost(nights, nightly_rate_cents)
