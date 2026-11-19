@@ -6,6 +6,9 @@ on:
       - "src/**"
       - "tests/**"
       - ".github/workflows/run-pytest.yml"
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true     
 
 jobs:
   test:
