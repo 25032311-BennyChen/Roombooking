@@ -27,6 +27,7 @@ def test_is_refundable_valid(hours_before_checkin, flexible_rate, expected):
 )
  
 def test_is_refundable_type_error(hours_before_checkin, flexible_rate):
+    
     with pytest.raises(TypeError):
         is_refundable(hours_before_checkin, flexible_rate)
 
